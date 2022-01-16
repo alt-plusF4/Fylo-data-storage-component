@@ -1,0 +1,453 @@
+:root {
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+
+body {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+
+/*Class Targets*/
+.container {
+    background-color: var(--Very-Dark-Blue);
+    height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+.bg {
+    display: flex;
+    position: absolute;
+    top: 50vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+
+.mid {
+    align-items: center;
+    display: flex;
+    height: 220px;
+    left: 50%;
+    position: relative;
+    right: 50%;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+}
+
+
+.flyo {
+    background-color: var(--Dark-Blue);
+    border-radius: 10px;
+    border-top-right-radius: 100px;
+    bottom: 8%;
+    filter: drop-shadow(0 1px 15px rgba(0, 0, 0, 0.4));
+    height: 195px;
+    left: 5%;
+    position: absolute;
+    width: 330px;
+}
+
+
+.storage-box {
+    background-color: var(--Dark-Blue);
+    border-radius: 10px;
+    filter: drop-shadow(0 1px 15px rgba(0, 0, 0, 0.4));
+    height: 145px;
+    width: 540px;
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+}
+
+
+.icons {
+    position: absolute;
+    letter-spacing: 10px;
+    left: 10%;
+    bottom: 16%;
+}
+
+
+.ranger {
+    background-color: hsl(229, 57%, 11%, 0.5);
+    border-radius: 15px;
+    height: 20px;
+    left: 50%;
+    position: absolute;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    top: 55%;
+    width: 85%;
+}
+
+
+.range-values {
+    font-size: 0.75rem;
+}
+
+
+.bubble {
+    animation: motion 250ms forwards ease-in;
+    background: white;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    color: black;
+    font-size: 20px;
+    height: 75px;
+    line-height: 120px;
+    opacity: 0%;
+    padding: 0px;
+    position: absolute;
+    right: 9%;
+    text-align: center;
+    top: 8%;
+    width: 180px;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent white transparent transparent;
+    bottom: -19px;
+    left: 94.5%;
+    margin-left: -10px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    font-size: 70%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;    
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/*ID Targets*/
+#Lgb {
+    position: absolute;
+    top: 85px;
+    left: 7%;
+}
+
+#Rgb {
+    position: absolute;
+    top: 85px;
+    right: 7%;
+}
+
+#message {
+    position: absolute;
+    left: 7%;
+    top: 17%;
+    font-size: 0.875rem;
+}
+
+#doc {
+    background-color: var(--Very-Dark-Blue);
+    border: 10px solid var(--Very-Dark-Blue);
+    border-radius: 8px;
+    padding: 0 2px;
+}
+
+#folder {
+    background-color: var(--Very-Dark-Blue);
+    border: 10px solid var(--Very-Dark-Blue);
+    border-radius: 8px;
+    padding: 2px 1px;
+}
+
+#upload {
+    background-color: var(--Very-Dark-Blue);
+    border: 10px solid var(--Very-Dark-Blue);
+    border-radius: 8px;
+    padding: 4px 1px;
+}
+
+
+#logo {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+#range {
+    animation: range 300ms ease-in-out forwards;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 16px;
+    height: 14px;
+    left: 0.7%;
+    position: absolute;
+    top: 14%;
+    width: 2%;
+
+}
+
+#circle {
+    background-color: white;
+    border-radius: 50%;
+    height: 10px;
+    right: 0.8%;
+    position: absolute;
+    width: 10px;
+    margin-top: 1.6px;
+}
+
+#figure {
+    left: 25px;
+    position: absolute;
+    top: -52px;
+    font-size: 190%;
+}
+
+#gb-left {
+    color: rgb(122, 122, 122);
+    letter-spacing: 1px;
+    font-size: 62.5%;
+    position: absolute;
+    top: -34px;
+    right: 25px;
+
+}
+
+/*Basic Animation using Keyframes*/
+@keyframes motion {
+    from {
+        top: 8%;
+        opacity: 0%;
+    }
+
+    to {
+        top: 3%;
+        opacity: 100%;
+    }
+}
+
+@keyframes range {
+    from {
+        width: 2%;
+    }
+
+    to {
+        width: 75%;
+    }
+}
+
+
+
+@media (max-width:1000px) and (min-width:400px) {
+    .mid {
+        height: 100vh;
+        width: 80%;
+    }
+
+
+    .flyo {
+        top: 30%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 180ms;
+    }
+
+
+    .storage-box {
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        width: 450px;
+        top: 60%;
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 180ms;
+    }
+
+    .bubble {
+        border-radius: 10px;
+        left: 50%;
+        right: 50%;
+        top: 75%;
+        transform: translate(-50%, -50%);
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 100ms;
+    }
+
+    .bubble::after {
+        border-color: transparent;
+    }
+
+    @keyframes motion {
+        from {
+            top: 75%;
+            opacity: 0%;
+        }
+
+        to {
+            top: 72%;
+            opacity: 100%;
+        }
+    }
+
+}
+
+
+/*Media Queries for responsiveness*/
+@media (max-width:500px) {
+    .bg img {
+        content: url(images/bg-mobile.png);
+        width: 100%;
+
+    }
+
+    .mid {
+        height: 100vh;
+        width: 90%;
+    }
+
+    .flyo {
+        top: 30%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 180ms;
+        width: 325px;
+    }
+
+
+    .storage-box {
+        height: 150px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        width: 325px;
+        top: 57%;
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 180ms;
+    }
+
+    .bubble {
+        border-radius: 10px;
+        left: 50%;
+        right: 50%;
+        top: 72%;
+        transform: translate(-50%, -50%);
+        height: 70px;
+        width: 175px;
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 100ms;
+    }
+
+    .bubble::after {
+        border-color: transparent;
+    }
+
+    @keyframes motion {
+        from {
+            top: 72%;
+            opacity: 0%;
+        }
+
+        to {
+            top: 69%;
+            opacity: 100%;
+        }
+    }
+}
+
+
+
+@media (max-width:375px) {
+    .bg img {
+        content: url(images/bg-mobile.png);
+        width: 100%;
+
+    }
+
+    .mid {
+        height: 100vh;
+        width: 90%;
+    }
+
+    .flyo {
+        top: 30%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 180ms;
+        width: 305px;
+    }
+
+
+    .storage-box {
+        height: 150px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        width: 305px;
+        top: 57%;
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 180ms;
+    }
+
+    .bubble {
+        border-radius: 10px;
+        left: 50%;
+        right: 50%;
+        top: 72%;
+        transform: translate(-50%, -50%);
+        height: 60px;
+        width: 165px;
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 100ms;
+    }
+
+    .bubble::after {
+        border-color: transparent;
+    }
+
+    #figure {
+        left: 25px;
+        position: absolute;
+        top: -52px;
+        font-size: 160%;
+    }
+
+    #gb-left {
+        color: rgb(122, 122, 122);
+        letter-spacing: 1px;
+        font-size: 60%;
+        position: absolute;
+        top: -40px;
+        right: 25px;
+
+    }
+
+    @keyframes motion {
+        from {
+            top: 72%;
+            opacity: 0%;
+        }
+
+        to {
+            top: 69%;
+            opacity: 100%;
+        }
+    }
+}
+
